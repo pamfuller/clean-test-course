@@ -37,7 +37,7 @@ describe('Test Order', () => {
     );
     //Assert: replace the return true.
     await waitFor(() => {
-      return true;
+      expect(screen.getByText('$2.50')).toBeInTheDocument();
     });
   });
 
@@ -63,7 +63,7 @@ describe('Test Order', () => {
     );
     //Assert: replace the return true.
     await waitFor(() => {
-      return true;
+      expect(screen.getByText('$5.00')).toBeInTheDocument();
     });
   });
 });
